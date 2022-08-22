@@ -19,7 +19,7 @@ jobs:
           node-version: 12
       - name: Install Hexo
         env:
-          ACTION_DEPLOY_KEY: ${{ secrets.HEXO_DEPLOY_KEY }}
+          ACTION_DEPLOY_KEY: ${{ secrets.ACTION_DEPLOY_KEY }}
           USER_EMAIL: 64518651+shuzhouliu@users.noreply.github.com
           USER_NAME: shuzhouliu
         run: |
