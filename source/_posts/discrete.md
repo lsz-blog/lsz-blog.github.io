@@ -1,5 +1,5 @@
 ---
-title: discrete
+title: 离散化笔记
 date: 2022-08-24 06:21:03
 tags:
   - oi
