@@ -5,6 +5,7 @@ tags:
   - oi
   - acwing
   - 基础算法
+mathjax: true
 ---
 
 设有一个整数 $n$。
