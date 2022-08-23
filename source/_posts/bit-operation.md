@@ -5,6 +5,7 @@ tags:
   - oi
   - acwing
   - 基础算法
+category: 笔记
 mathjax: true
 ---
 
