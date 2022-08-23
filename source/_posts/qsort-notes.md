@@ -50,3 +50,5 @@ void quick_sort (int q[], int l, int r) {
     quick_sort(q, j+1, r);
 }
 ```
+
+同时，`std::sort` 也是快速排序的实现之一。
