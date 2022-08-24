@@ -18,7 +18,9 @@ mathjax: true
 并查集在使用路径压缩和启发式合并后，复杂度为 $O(\alpha(n))$。其中 $\alpha(n)$ 为使得 $A(m, m) \leq n$ 的最大整数 $m$，其中 Ackermann 函数 $A$ 的定义如下：
 
 $$
-A(m, n) = \begin{cases}n+1&\text{if }m=0\\A(m-1,1)&\text{if }m>0\text{ and }n=0\\A(m-1,A(m,n-1))&\text{otherwise}\end{cases}
+A(m, n) = \begin{cases}n+1&\text{if }m=0 \\ 
+A(m-1,1)&\text{if }m>0\text{ and }n=0 \\ 
+A(m-1,A(m,n-1))&\text{otherwise}\end{cases}
 $$
 
 实际上使用路径压缩后，也能达到 $O(\alpha(n))$ 的效果，但最坏情况是 $O(\log n)$。
