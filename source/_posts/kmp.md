@@ -3,7 +3,7 @@ title: KMP笔记
 date: 2022-08-24 21:38:00
 tags:
   - oi
-  - 基础算法
+  - 数据结构
 category: 笔记
 mathjax: true
 ---
