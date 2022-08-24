@@ -82,3 +82,5 @@ bool query (string s) {
     return p->isWord;
 }
 ```
+
+同时，还可以用于存储整数，思路相同。
