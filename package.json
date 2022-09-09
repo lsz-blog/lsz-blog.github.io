@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "gulp": "^4.0.2",
-    "hexo": "^5.0.0",
+    "hexo": "^6.3.0",
     "hexo-filter-mathjax": "^0.9.0",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-baidu-sitemap": "^0.1.9",
