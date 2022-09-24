@@ -58,3 +58,12 @@ int divisor_sum (int n) {
     return res;
 }
 ```
+
+最大公约数：
+
+```cpp
+int gcd (int x, int y) {
+    if (!y) return x;
+    return gcd(y, x%y);
+}
+```
