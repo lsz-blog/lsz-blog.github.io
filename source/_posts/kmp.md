@@ -15,16 +15,16 @@ mathjax: true
 模式串 $t$ 中每个位置 $j$ 的字符都有这种信息，采用 $next$ 数组表示，即 $next_j =\max k$。
 
 ```c++
-for (int i = 2, j = 0; i <= n; i++) {
+for (int i = 2, j = 0; i <= m; i++) {
     while (j && t[i] != t[j+1]) j = nxt[j];
     if (t[i] == t[j+1]) j++;
     nxt[i] = j;
 }
-for (int i = 1, j = 0; i <= m; i++) {
+for (int i = 1, j = 0; i <= n; i++) {
     while (j && s[i] != t[j+1]) j = nxt[j];
     if (s[i] == t[j+1]) j++;
-    if (j == n) {
-        cout << i-n << " ";
+    if (j == m) {
+        cout << i-m << " ";
         j = nxt[j];
     }
 }
