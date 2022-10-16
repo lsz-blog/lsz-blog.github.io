@@ -243,13 +243,13 @@ int main() {
 
 考虑优化 $f_j$ 的转移。朴素的状态转移方程是 $f_{i, j} = \max_{k=0}^{c_i}(f_{i-1,j-kw_i} + kv_i)$，时间复杂度 $O(\sum c_i V)$。
 
-令 $g_{x,y} = f_{i,xw_i+y}$，$g'_{x,y} = f_{i-1,xw_i+y}$，则
+令 $g_{x,y} = f_{i,xw_i+y}$，$g^{\text{'}}_{x,y} = f_{i-1,xw_i+y}$，则
 
 $$
-g_{x,y}= \max_{k=0}^{c_i}(g'_{x-k,y} + kv_i)
+g_{x,y}= \max_{k=0}^{c_i}(g{\text{'}}_{x-k,y} + kv_i)
 $$
 
-令 $G_{x,y} = g'{x,y} - xv_i$，则方程可转化为：
+令 $G_{x,y} = g{\text{'}}{x,y} - xv_i$，则方程可转化为：
 
 $$
 g_{x,y} = \max_{k=0}^{c_i}(G_{x-k,y} + xv_i)
