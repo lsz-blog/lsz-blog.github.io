@@ -256,3 +256,22 @@ g_{x,y} = \max_{k=0}^{c_i}(G_{x-k,y} + xv_i)
 $$
 
 便是经典的单调队列优化形式。所以求出所有 $g_{x,y}$ 复杂度为 $O(\lfloor\dfrac{V}{w_i}\rfloor)\times O(w_i)=O(V)$，则总复杂度 $O(nW)$。
+
+### 混合背包
+
+> 混合背包就是把01背包、完全背包、多重背包混合在一起，可以取 $1$ 次，有穷次或无穷次。
+
+伪代码：
+
+```peudocode
+for i = 1 to n
+    if type[i] == 1
+        do 01_knapsack
+    else if type[i] == 2
+        do complete_knapsack
+    else
+        do multi_knapsack
+```
+
+例题：[Luogu P1833 樱花](https://www.luogu.com.cn/problem/P1833)
+
