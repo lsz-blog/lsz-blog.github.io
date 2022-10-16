@@ -280,3 +280,21 @@ for i = 1 to n
 多维费用背包就是每个物品有多个费用，每个费用都有一个限制，求最大价值。
 
 按照01背包增加维度即可，要注意的是，**不要添加物品编号维度**，会导致空间复杂度爆炸，不幸MLE。
+
+例题：[Luogu P1855 榨取kkksc03](https://www.luogu.com.cn/problem/P1855) 
+
+### 分组背包
+
+分组背包就是把物品分成若干组，每组内的物品互斥，求最大价值。
+
+显然每组需要执行一次01背包，所以总复杂度为 $O(nW)$。
+
+例题：[Luogu P1757 通天之分组背包](https://www.luogu.com.cn/problem/P1757)
+
+```c++
+for (int i = 1; i <= g; i++)
+    for (int j = m; j >= 0; j++)
+        for (int k = 1; k <= cnt[i]; k++)
+            if (j >= w[i][k])
+                dp[j] = max(dp[j], dp[j-w[i][k]] + v[i][k]);
+```
